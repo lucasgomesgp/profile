@@ -34,8 +34,15 @@ const HomeSection = styled.section`
 `;
 
 const Texts = styled.div``;
-const Title = styled.h1``;
-const SubText = styled.div``;
+const Title = styled.h1`
+  font-size: 3.25rem;
+  background: linear-gradient(180deg, #BC7ADD 0.52%, #5C59DF 32.81%, #6F48DF 49.48%, #8A20DD 66.67%, #B00FFF 92.71%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
+const SubText = styled.p`
+  color: #FFFFFF;
+`;
 
 const HamburgerMenu = styled.button`
   display: flex;

@@ -72,9 +72,8 @@ const Home: NextPage = () => {
               Front-end and Mobile Developer
             </SubText>
           </Texts>
-          <Image src={profileImg} width={420} height={450} quality={100} objectFit="cover" alt="Lucas Gomes Photo" />
+          <Image src={profileImg} width={420} height={450} quality={100}  alt="Lucas Gomes Photo" />
         </HomeSection>
-
       </Main>
     </>
   );
