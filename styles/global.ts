@@ -20,4 +20,7 @@ export default createGlobalStyle`
         width: 100%;
         min-height: 100%;
     }
+    p{
+        color: #FFFFFF;
+    }
 `;
