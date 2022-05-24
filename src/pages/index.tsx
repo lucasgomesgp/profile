@@ -120,9 +120,6 @@ const Home: NextPage = () => {
                 </Type>
                 <Type>
                   <Image src="/assets/logo_unijuazeiro.png" width={152} height={69} alt="Unijuazeiro Logo" />
-                  <Small>
-                    Unijuazeiro
-                  </Small>
                   <TypeStudy>
                     Bachelor in Information Systems
                   </TypeStudy>

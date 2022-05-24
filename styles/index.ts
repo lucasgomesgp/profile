@@ -62,8 +62,7 @@ const Title = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
-const SubText = styled.p`
-`;
+const SubText = styled.p``;
 
 const HamburgerMenu = styled.button`
   display: flex;
@@ -131,10 +130,14 @@ const Small = styled.p`
 const TypeStudy = styled.p`
   font-size: 1rem;
   font-weight: 700;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 1.125rem;
 `;
 const Time = styled.p`
   font-size: 1rem;
   font-weight: 400;
+  margin-top: 1.125rem;
 `;
 
 export {
