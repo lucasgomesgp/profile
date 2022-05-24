@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 const Header = styled.header`
@@ -8,24 +9,6 @@ const Header = styled.header`
   flex-wrap: wrap;
 `;
 
-const LogoArea = styled.div`
-  cursor: pointer;
-  position: relative;
-
-  #logo {
-    #name {
-      animation: animateLogo 2s ease linear 1;
-    }
-  }
-  @keyframes animateLogo {
-    0% {
-      display: none;
-    }
-    100% {
-      display: initial;
-    }
-  }
-`;
 
 const Menu = styled.div`
   display: flex;
@@ -191,10 +174,45 @@ const Paragraph = styled.p`
   margin-top: 2rem;
 `;
 
+const Projects = styled.section`
+  text-align: center;
+`;
+
+const Footer = styled.footer`
+  display: flex;
+  justify-content: space-around;
+  margin-top: 13.1875rem;
+`;
+
+const Element = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+`;
+
+const TitleSmall = styled.h5`
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+`;
+
+const MailLink = styled.a`
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+`;
+
+const MenuItem = styled.a`
+  color: #FFFFFF;
+  text-decoration: underline;
+`;
+
 export {
   Header,
   HamburgerMenu,
-  LogoArea,
   Menu,
   Main,
   HomeSection,
@@ -218,4 +236,10 @@ export {
   Section,
   Circle,
   Paragraph,
+  Projects,
+  Footer,
+  Element,
+  TitleSmall,
+  MailLink,
+  MenuItem,
 };
