@@ -4,25 +4,25 @@
 <path d="M25 78.125H75" stroke="url(#paint2_linear_32_93)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 <defs>
 <linearGradient id="paint0_linear_32_93" x1="50" y1="9.375" x2="50" y2="90.625" gradientUnits="userSpaceOnUse">
-<stop offset="0.00520833" stop-color="#BC7ADD"/>
-<stop offset="0.328125" stop-color="#5C59DF"/>
-<stop offset="0.494792" stop-color="#6F48DF"/>
-<stop offset="0.666667" stop-color="#8A20DD"/>
-<stop offset="0.927083" stop-color="#B00FFF"/>
+<stop offset="0.00520833" stopColor="#BC7ADD"/>
+<stop offset="0.328125" stopColor="#5C59DF"/>
+<stop offset="0.494792" stopColor="#6F48DF"/>
+<stop offset="0.666667" stopColor="#8A20DD"/>
+<stop offset="0.927083" stopColor="#B00FFF"/>
 </linearGradient>
 <linearGradient id="paint1_linear_32_93" x1="50" y1="21.875" x2="50" y2="22.875" gradientUnits="userSpaceOnUse">
-<stop offset="0.00520833" stop-color="#BC7ADD"/>
-<stop offset="0.328125" stop-color="#5C59DF"/>
-<stop offset="0.494792" stop-color="#6F48DF"/>
-<stop offset="0.666667" stop-color="#8A20DD"/>
-<stop offset="0.927083" stop-color="#B00FFF"/>
+<stop offset="0.00520833" stopColor="#BC7ADD"/>
+<stop offset="0.328125" stopColor="#5C59DF"/>
+<stop offset="0.494792" stopColor="#6F48DF"/>
+<stop offset="0.666667" stopColor="#8A20DD"/>
+<stop offset="0.927083" stopColor="#B00FFF"/>
 </linearGradient>
 <linearGradient id="paint2_linear_32_93" x1="50" y1="78.125" x2="50" y2="79.125" gradientUnits="userSpaceOnUse">
-<stop offset="0.00520833" stop-color="#BC7ADD"/>
-<stop offset="0.328125" stop-color="#5C59DF"/>
-<stop offset="0.494792" stop-color="#6F48DF"/>
-<stop offset="0.666667" stop-color="#8A20DD"/>
-<stop offset="0.927083" stop-color="#B00FFF"/>
+<stop offset="0.00520833" stopColor="#BC7ADD"/>
+<stop offset="0.328125" stopColor="#5C59DF"/>
+<stop offset="0.494792" stopColor="#6F48DF"/>
+<stop offset="0.666667" stopColor="#8A20DD"/>
+<stop offset="0.927083" stopColor="#B00FFF"/>
 </linearGradient>
 </defs>
 </svg>

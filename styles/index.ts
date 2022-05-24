@@ -140,6 +140,57 @@ const Time = styled.p`
   margin-top: 1.125rem;
 `;
 
+const Habilities = styled.section`
+  text-align: center;
+`;
+
+const TitleHabilities = styled.h4`
+  margin-top: 2.625rem;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 400;
+`;
+const HabilitiesSection = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10.25rem;
+  gap: 11.875rem;
+  padding: 0 5.3125rem;
+`;
+const Section = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+const Circle = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  position: relative;
+
+  #bgCircle{
+    position: absolute;
+    top: 0;
+    transition: 1s all;
+    cursor: pointer;
+
+    :hover{
+      transform: rotate(360deg);
+      filter: opacity(10);
+    }
+  }
+  
+`;
+const Paragraph = styled.p`
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin-top: 2rem;
+`;
+
 export {
   Header,
   HamburgerMenu,
@@ -161,4 +212,10 @@ export {
   Small,
   TypeStudy,
   Time,
+  Habilities,
+  TitleHabilities,
+  HabilitiesSection,
+  Section,
+  Circle,
+  Paragraph,
 };
