@@ -87,9 +87,11 @@ const AboutMe = styled.section`
 const SubTitle = styled.h2`
   color: rgba(255, 255, 255, 0.2);
   font-family: "Inter", sans-serif;
-  margin-top: 21.3125rem;
-
+  margin-top: 10rem;
+  font-size: 3rem;
+  
   @media screen and (min-width: 768px) {
+    margin-top: 21.3125rem;
     font-size: 6.25rem;
   }
 `;
@@ -106,9 +108,9 @@ const TextSection = styled.article`
 `;
 
 const ImgArea = styled.div`
- width: 100%;
- flex: 1;
- margin: 0 auto;
+  width: 100%;
+  flex: 1;
+  margin: 0 auto;
 `;
 const Text = styled.p`
   margin: 0 auto;
@@ -165,14 +167,16 @@ const HabilitiesSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10.25rem;
   gap: 11.875rem;
+  margin-top: 4rem;
 
   @media screen and (max-width: 1024px) {
     flex-wrap: wrap;
+    gap: 4rem;
   }
   @media screen and (min-width: 768px) {
     padding: 0 5.3125rem;
+    margin-top: 10.25rem;
   }
 `;
 const Section = styled.div`
@@ -217,6 +221,10 @@ const Footer = styled.footer`
   justify-content: space-around;
   font-family: "Inter", sans-serif;
   margin-top: 13.1875rem;
+
+  @media screen and (max-width: 768px) {
+    gap: 10rem;
+  }
 `;
 
 const Element = styled.div`
