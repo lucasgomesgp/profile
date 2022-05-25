@@ -35,12 +35,15 @@ import {
   MailLink,
   MenuItem,
   ImgArea,
+  Container,
 } from '../../styles';
 import profileImg from "../../public/assets/profile.png";
 import aboutMeImg from "../../public/assets/about_me.png";
 import { Logo } from '../components/Logo';
 import { SocialMedia } from '../components/SocialMedia';
 import GlobalStyle from "../../styles/global";
+import { Project } from '../components/Project';
+import { projects } from '../../utils/data';
 
 const Home: NextPage = () => {
   return (
@@ -127,8 +130,8 @@ const Home: NextPage = () => {
             </TextSection>
           </AboutSection>
         </AboutMe>
-        <Habilities id="habilities">
-          <SubTitle>HABILITIES</SubTitle>
+        <Habilities id="skills">
+          <SubTitle>SKILLS</SubTitle>
           <HabilitiesSection>
             <Section>
               <Circle>
@@ -235,7 +238,8 @@ const Home: NextPage = () => {
                 Code
               </TitleHabilities>
               <Paragraph>
-                Software development, following best practices and clean code.              </Paragraph>
+                Software development, following best practices and clean code.
+              </Paragraph>
             </Section>
             <Section>
               <Circle>
@@ -285,12 +289,18 @@ const Home: NextPage = () => {
                 Mobile
               </TitleHabilities>
               <Paragraph>
-                Application development with the best market practices, using React Native.              </Paragraph>
+                Application development with the best market practices, using React Native.
+              </Paragraph>
             </Section>
           </HabilitiesSection>
         </Habilities>
         <Projects id="projects">
           <SubTitle>PROJECTS</SubTitle>
+          <Container>
+            {projects.map(({ id, altImg, image, text, link_github, link_deploy }) => (
+              <Project key={id} image={image} altImg={altImg} text={text} link_github={link_github} link_deploy={link_deploy} />
+            ))}
+          </Container>
         </Projects>
         <Footer>
           <Logo />
@@ -312,8 +322,8 @@ const Home: NextPage = () => {
             <MenuItem href="#aboutme">
               About
             </MenuItem>
-            <MenuItem href="#habilities">
-              Habilitites
+            <MenuItem href="#skills">
+              Skills
             </MenuItem>
             <MenuItem href="#projects">
               Projects

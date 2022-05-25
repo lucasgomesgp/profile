@@ -7,7 +7,7 @@ export const Container = styled.div`
   gap: 2.5rem;
   margin-top: 10.25rem;
 
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 48rem){
     gap: 4.5rem;
   }
 `;

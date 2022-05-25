@@ -7,14 +7,14 @@ const Header = styled.header`
   flex-wrap: wrap;
   width: 100%;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     padding: 2.625rem 7.5625rem;
   }
 `;
 
 const Menu = styled.div`
   display: none;
-  
+
   a {
     color: #ffffff;
     text-decoration: none;
@@ -24,12 +24,12 @@ const Menu = styled.div`
     border-radius: 10px;
     transition: all 500ms;
 
-    :hover{
+    :hover {
       background: hsla(0, 0%, 100%, 0.1);
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     display: flex;
   }
 `;
@@ -78,7 +78,7 @@ const HamburgerMenu = styled.button`
     height: 2px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     display: none;
   }
 `;
@@ -95,11 +95,20 @@ const SubTitle = styled.h2`
   font-family: "Inter", sans-serif;
   margin-top: 10rem;
   font-size: 3rem;
-  
-  @media screen and (min-width: 768px) {
+
+  @media screen and (min-width: 48rem) {
     margin-top: 21.3125rem;
     font-size: 6.25rem;
   }
+`;
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 130px;
+  margin-top: 8rem;
 `;
 const AboutSection = styled.section`
   display: flex;
@@ -122,7 +131,7 @@ const Text = styled.p`
   margin: 0 auto;
   margin-bottom: 6.25rem;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     width: 30rem;
   }
 `;
@@ -180,7 +189,7 @@ const HabilitiesSection = styled.section`
     flex-wrap: wrap;
     gap: 4rem;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48rem) {
     padding: 0 5.3125rem;
     margin-top: 10.25rem;
   }
@@ -228,7 +237,7 @@ const Footer = styled.footer`
   font-family: "Inter", sans-serif;
   margin-top: 13.1875rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 48rem) {
     gap: 10rem;
   }
 `;
@@ -270,6 +279,7 @@ export {
   SubText,
   AboutMe,
   SubTitle,
+  Container,
   AboutSection,
   ImgArea,
   TextSection,
