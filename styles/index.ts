@@ -1,17 +1,19 @@
-import Link from "next/link";
 import styled from "styled-components";
 
 const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2.625rem 7.5625rem;
   flex-wrap: wrap;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    padding: 2.625rem 7.5625rem;
+  }
 `;
 
-
 const Menu = styled.div`
-  display: flex;
+  display: none;
   gap: 1.25rem;
 
   a {
@@ -20,8 +22,14 @@ const Menu = styled.div`
     font-size: 14px;
     font-weight: 500;
   }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 `;
-const Main = styled.main``;
+const Main = styled.main`
+  width: 100%;
+`;
 
 const HomeSection = styled.section`
   display: flex;
@@ -29,6 +37,7 @@ const HomeSection = styled.section`
   justify-content: center;
   gap: 8.25rem;
   margin-top: 4rem;
+  flex-wrap: wrap;
 `;
 
 const Texts = styled.div``;
@@ -62,6 +71,10 @@ const HamburgerMenu = styled.button`
     background: #ffffff;
     height: 2px;
   }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const AboutMe = styled.section`
@@ -69,15 +82,20 @@ const AboutMe = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 const SubTitle = styled.h2`
-  font-size: 6.25rem;
   color: rgba(255, 255, 255, 0.2);
   font-family: "Inter", sans-serif;
   margin-top: 21.3125rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 6.25rem;
+  }
 `;
 const AboutSection = styled.section`
   display: flex;
+  flex-wrap: wrap;
   margin-top: 5.9375rem;
   gap: 8.0625rem;
 `;
@@ -86,10 +104,19 @@ const TextSection = styled.article`
   flex-direction: column;
   justify-content: center;
 `;
+
+const ImgArea = styled.div`
+ width: 100%;
+ flex: 1;
+ margin: 0 auto;
+`;
 const Text = styled.p`
-  width: 30rem;
   margin: 0 auto;
   margin-bottom: 6.25rem;
+
+  @media screen and (min-width: 768px) {
+    width: 30rem;
+  }
 `;
 const TitleSection = styled.h4`
   font-size: 2.5rem;
@@ -102,6 +129,7 @@ const TitleSection = styled.h4`
 const EducationalArea = styled.div`
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 1.375rem;
   text-align: center;
 `;
@@ -139,7 +167,13 @@ const HabilitiesSection = styled.section`
   justify-content: center;
   margin-top: 10.25rem;
   gap: 11.875rem;
-  padding: 0 5.3125rem;
+
+  @media screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0 5.3125rem;
+  }
 `;
 const Section = styled.div`
   display: flex;
@@ -155,18 +189,17 @@ const Circle = styled.section`
   height: 200px;
   position: relative;
 
-  #bgCircle{
+  #bgCircle {
     position: absolute;
     top: 0;
     transition: 1s all;
     cursor: pointer;
 
-    :hover{
+    :hover {
       transform: rotate(360deg);
       filter: opacity(10);
     }
   }
-  
 `;
 const Paragraph = styled.p`
   font-weight: 300;
@@ -180,7 +213,9 @@ const Projects = styled.section`
 
 const Footer = styled.footer`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  font-family: "Inter", sans-serif;
   margin-top: 13.1875rem;
 `;
 
@@ -192,21 +227,21 @@ const Element = styled.div`
 `;
 
 const TitleSmall = styled.h5`
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1.875rem;
 `;
 
 const MailLink = styled.a`
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   font-family: "Inter", sans-serif;
   font-weight: 100;
 `;
 
 const MenuItem = styled.a`
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: underline;
 `;
 
@@ -222,6 +257,7 @@ export {
   AboutMe,
   SubTitle,
   AboutSection,
+  ImgArea,
   TextSection,
   Text,
   TitleSection,

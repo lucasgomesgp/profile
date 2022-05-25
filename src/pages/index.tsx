@@ -34,15 +34,18 @@ import {
   TitleSmall,
   MailLink,
   MenuItem,
+  ImgArea,
 } from '../../styles';
 import profileImg from "../../public/assets/profile.png";
 import aboutMeImg from "../../public/assets/about_me.png";
 import { Logo } from '../components/Logo';
 import { SocialMedia } from '../components/SocialMedia';
+import GlobalStyle from "../../styles/global";
 
 const Home: NextPage = () => {
   return (
     <>
+      <GlobalStyle />
       <Head>
         <title>Lucas Gomes</title>
         <meta name="description" content="Lucas Gomes Website" />
@@ -54,7 +57,7 @@ const Home: NextPage = () => {
           <Link href="#home">
             Home
           </Link>
-          <Link href="#about">
+          <Link href="#aboutme">
             About
           </Link>
           <Link href="#habilities">
@@ -63,7 +66,7 @@ const Home: NextPage = () => {
           <Link href="#projects">
             Projects
           </Link>
-          <Link href="#links">
+          <Link href="/links">
             Links
           </Link>
         </Menu>
@@ -74,7 +77,7 @@ const Home: NextPage = () => {
         </HamburgerMenu>
       </Header>
       <Main>
-        <HomeSection>
+        <HomeSection id="home">
           <Texts>
             <Title>
               Lucas Gomes
@@ -83,12 +86,14 @@ const Home: NextPage = () => {
               Front-end and Mobile Developer
             </SubText>
           </Texts>
-          <Image src={profileImg} width={420} height={450} quality={100} alt="Lucas Gomes Photo" />
+          <Image src={profileImg} width={420} height={450} quality={100} priority alt="Lucas Gomes Photo" layout="fixed" />
         </HomeSection>
-        <AboutMe>
+        <AboutMe id="aboutme">
           <SubTitle>ABOUT ME</SubTitle>
           <AboutSection>
-            <Image src={aboutMeImg} width={370} height={523} quality={100} alt="Photo Lucas Gomes reading Clean Code" />
+            <ImgArea>
+              <Image src={aboutMeImg} width={370} height={523} quality={100} alt="Photo Lucas Gomes reading Clean Code" />
+            </ImgArea>
             <TextSection>
               <Text>
                 Currently 22 years old, programming and learning the basis of quality software development, with a focus on the Web.
@@ -108,7 +113,7 @@ const Home: NextPage = () => {
                   <Time>2016-2018</Time>
                 </Type>
                 <Type>
-                  <Link href="https://unijuazeiro.edu.br/"  style={{ cursor: "pointer" }}>
+                  <Link href="https://unijuazeiro.edu.br/" style={{ cursor: "pointer" }}>
                     <a target="_blank">
                       <Image src="/assets/logo_unijuazeiro.png" width={152} height={69} alt="Unijuazeiro Logo" />
                     </a>
@@ -122,7 +127,7 @@ const Home: NextPage = () => {
             </TextSection>
           </AboutSection>
         </AboutMe>
-        <Habilities>
+        <Habilities id="habilities">
           <SubTitle>HABILITIES</SubTitle>
           <HabilitiesSection>
             <Section>
@@ -284,7 +289,7 @@ const Home: NextPage = () => {
             </Section>
           </HabilitiesSection>
         </Habilities>
-        <Projects>
+        <Projects id="projects">
           <SubTitle>PROJECTS</SubTitle>
         </Projects>
         <Footer>
@@ -304,7 +309,7 @@ const Home: NextPage = () => {
             <MenuItem href="#home">
               Home
             </MenuItem>
-            <MenuItem href="#about">
+            <MenuItem href="#aboutme">
               About
             </MenuItem>
             <MenuItem href="#habilities">
