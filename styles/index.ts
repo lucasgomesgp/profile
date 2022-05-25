@@ -14,13 +14,19 @@ const Header = styled.header`
 
 const Menu = styled.div`
   display: none;
-  gap: 1.25rem;
-
+  
   a {
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
+    padding: 1.25rem;
+    border-radius: 10px;
+    transition: all 500ms;
+
+    :hover{
+      background: hsla(0, 0%, 100%, 0.1);
+    }
   }
 
   @media screen and (min-width: 768px) {

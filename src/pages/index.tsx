@@ -54,19 +54,19 @@ const Home: NextPage = () => {
       <Header>
         <Logo />
         <Menu>
-          <Link href="#home">
+          <Link href="#home" className="link">
             Home
           </Link>
-          <Link href="#aboutme">
+          <Link href="#aboutme" className="link">
             About
           </Link>
-          <Link href="#habilities">
+          <Link href="#habilities" className="link">
             Habilities
           </Link>
-          <Link href="#projects">
+          <Link href="#projects" className="link">
             Projects
           </Link>
-          <Link href="/links">
+          <Link href="/links" className="link">
             Links
           </Link>
         </Menu>
@@ -88,9 +88,9 @@ const Home: NextPage = () => {
           </Texts>
           <Image src={profileImg} width={420} height={450} quality={100} priority alt="Lucas Gomes Photo" layout="fixed" />
         </HomeSection>
-        <AboutMe id="aboutme">
+        <AboutMe>
           <SubTitle>ABOUT ME</SubTitle>
-          <AboutSection>
+          <AboutSection id="aboutme">
             <ImgArea>
               <Image src={aboutMeImg} width={370} height={523} quality={100} alt="Photo Lucas Gomes reading Clean Code" />
             </ImgArea>
