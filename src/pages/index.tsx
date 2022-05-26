@@ -2,6 +2,14 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import profileImg from "../../public/assets/profile.png";
+import aboutMeImg from "../../public/assets/about_me.png";
+import { Logo } from '../components/Logo';
+import { SocialMedia } from '../components/SocialMedia';
+import GlobalStyle from "../../styles/global";
+import { Project } from '../components/Project';
+import { projects } from '../../utils/data';
+import { useElementScroll, useTransform, useViewportScroll } from 'framer-motion';
 import {
   HamburgerMenu,
   Header,
@@ -37,15 +45,16 @@ import {
   ImgArea,
   Container,
 } from '../../styles';
-import profileImg from "../../public/assets/profile.png";
-import aboutMeImg from "../../public/assets/about_me.png";
-import { Logo } from '../components/Logo';
-import { SocialMedia } from '../components/SocialMedia';
-import GlobalStyle from "../../styles/global";
-import { Project } from '../components/Project';
-import { projects } from '../../utils/data';
+import { useRef } from 'react';
 
 const Home: NextPage = () => {
+  const aboutRef = useRef<HTMLElement | null>();
+  const { scrollYProgress } = useViewportScroll();
+  const positionAboutSection = useTransform(
+    scrollYProgress,
+    [0, 0.180],
+    ["-100%", "0%"]
+  );
   return (
     <>
       <GlobalStyle />
@@ -97,10 +106,10 @@ const Home: NextPage = () => {
         <AboutMe>
           <SubTitle>ABOUT ME</SubTitle>
           <AboutSection id="aboutme">
-            <ImgArea>
+            <ImgArea style={{ left: positionAboutSection }}>
               <Image src={aboutMeImg} width={370} height={523} quality={100} alt="Photo Lucas Gomes reading Clean Code" />
             </ImgArea>
-            <TextSection>
+            <TextSection style={{ right: positionAboutSection }}>
               <Text>
                 Currently 22 years old, programming and learning the basis of quality software development, with a focus on the Web.
               </Text>

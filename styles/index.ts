@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { motion } from "framer-motion";
 
 const moveLeft = keyframes`
   from {
@@ -53,6 +54,7 @@ const Menu = styled.div`
 `;
 const Main = styled.main`
   width: 100%;
+  overflow: hidden;
 `;
 
 const HomeSection = styled.section`
@@ -109,7 +111,7 @@ const HamburgerMenu = styled.button`
   }
 `;
 
-const AboutMe = styled.section`
+const AboutMe = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,16 +144,24 @@ const AboutSection = styled.section`
   margin-top: 5.9375rem;
   gap: 8.0625rem;
 `;
-const TextSection = styled.article`
+const TextSection = styled(motion.article)`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  /* right: -100%; */
+  transition: all 1s;
+  
 `;
 
-const ImgArea = styled.div`
+const ImgArea = styled(motion.div)`
   width: 100%;
   flex: 1;
   margin: 0 auto;
+  position: relative;
+  /* left: -100%; */
+  transition: all 1s;
+  
 `;
 const Text = styled.p`
   margin: 0 auto;
