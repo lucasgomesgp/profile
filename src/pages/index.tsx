@@ -72,6 +72,9 @@ const Home: NextPage = () => {
           <Link href="/links" className="link">
             Links
           </Link>
+          <Link href="/setup" className="link">
+            Setup
+          </Link>
         </Menu>
         <HamburgerMenu>
           <span />
@@ -89,7 +92,7 @@ const Home: NextPage = () => {
               Front-end and Mobile Developer
             </SubText>
           </Texts>
-          <Image src={profileImg} width={420} height={450} quality={100} priority alt="Lucas Gomes Photo" layout="fixed" />
+          <Image src={profileImg} width={420} height={450} quality={100} priority alt="Lucas Gomes Photo" layout="fixed" id="profilePhoto" />
         </HomeSection>
         <AboutMe>
           <SubTitle>ABOUT ME</SubTitle>

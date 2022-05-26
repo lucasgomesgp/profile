@@ -1,4 +1,22 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const moveLeft = keyframes`
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+`;
+
+const moveRight = keyframes`
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+`;
 
 const Header = styled.header`
   display: flex;
@@ -44,9 +62,17 @@ const HomeSection = styled.section`
   gap: 8.25rem;
   margin-top: 4rem;
   flex-wrap: wrap;
+
+  #profilePhoto {
+    position: relative;
+    animation: ${moveRight} 1s ease-in 1;
+  }
 `;
 
-const Texts = styled.div``;
+const Texts = styled.div`
+  position: relative;
+  animation: ${moveLeft} 1s ease-in 1;
+`;
 const Title = styled.h1`
   font-size: 3.25rem;
   background: linear-gradient(
