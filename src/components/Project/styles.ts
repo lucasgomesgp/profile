@@ -10,6 +10,15 @@ const button = `
     border: none;
     cursor: pointer;
     border-radius: 4px;
+
+    @media screen and (max-width: 26.5625rem) {
+      width: 7rem;
+      gap: 0.2rem;
+      svg{
+        width: 24px;
+        height: 24px;
+      }
+    }
     
 `;
 const Container = styled.section`
@@ -18,7 +27,6 @@ const Container = styled.section`
 
 const WrapperImg = styled.div`
   position: relative;
-  width: 400px;
 
   transition: all 200ms;
   :hover {
@@ -35,14 +43,16 @@ const WrapperImg = styled.div`
 const Text = styled.p`
   text-align: left;
   margin-top: 1.125rem;
+  max-width: 400px;
 `;
 
 const Buttons = styled.div`
   display: none;
-  padding: 0 4rem;
-  gap: 2rem;
   position: absolute;
+  gap: 2rem;
   top: 40%;
+  padding: 0 2rem;
+
 `;
 
 const Github = styled.button`
@@ -53,6 +63,10 @@ const Github = styled.button`
 const BtnText = styled.p`
   font-weight: 600;
   font-size: 1.25rem;
+
+  @media screen and (max-width: 48rem) {
+    font-size: 1rem;
+  }
 `;
 
 const Deploy = styled.button`

@@ -23,7 +23,7 @@ export function Project({ text, image, altImg, link_github, link_deploy }: Props
     return (
         <Container>
             <WrapperImg>
-                <Image src={image} alt={altImg} width={500} height={300} layout="fixed" id="project" />
+                <Image src={image} alt={altImg} width={500} height={300} layout="responsive" id="project" />
                 <Buttons id="btns">
                     <Github onClick={() => { handleRedirect({ type: "github" }) }}>
                         <BtnText>
