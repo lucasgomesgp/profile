@@ -6,7 +6,14 @@ export const Container = styled.div`
   justify-content: center;
   gap: 2.5rem;
   margin-top: 10.25rem;
-
+  padding-bottom: 2rem;
+  
+  img{
+    transition: all 200ms;
+    :hover{
+      opacity: 0.5;
+    }
+  }
   @media screen and (min-width: 48rem){
     gap: 4.5rem;
   }

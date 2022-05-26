@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { BtnText, Buttons, Container, Deploy, Github, Text, WrapperImg } from "./styles";
 import { VscGithub, VscGlobe } from "react-icons/vsc";
-import { useRouter } from "next/router";
-
 interface Props {
     text: string;
     image: string;
@@ -14,13 +12,12 @@ interface Redirect {
     type: "github" | "deploy";
 }
 export function Project({ text, image, altImg, link_github, link_deploy }: Props) {
-    const router = useRouter();
 
     function handleRedirect({ type }: Redirect) {
         if (type === "github") {
-            router.push(link_github);
+            window.open(link_github, "_blank");
         } else {
-            router.push(link_deploy);
+            window.open(link_deploy, "_blank");
         }
     }
     return (
