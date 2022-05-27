@@ -54,7 +54,6 @@ const Menu = styled.div`
 `;
 const Main = styled.main`
   width: 100%;
-  overflow: hidden;
 `;
 
 const HomeSection = styled.section`
@@ -117,6 +116,7 @@ const AboutMe = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  overflow: hidden;
 `;
 const SubTitle = styled.h2`
   color: rgba(255, 255, 255, 0.2);
@@ -149,9 +149,7 @@ const TextSection = styled(motion.article)`
   flex-direction: column;
   justify-content: center;
   position: relative;
-  /* right: -100%; */
   transition: all 1s;
-  
 `;
 
 const ImgArea = styled(motion.div)`
@@ -159,9 +157,7 @@ const ImgArea = styled(motion.div)`
   flex: 1;
   margin: 0 auto;
   position: relative;
-  /* left: -100%; */
   transition: all 1s;
-  
 `;
 const Text = styled.p`
   margin: 0 auto;
