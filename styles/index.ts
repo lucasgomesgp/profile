@@ -1,6 +1,23 @@
 import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 
+const lightBorder = keyframes`
+  from{
+    border-right-color: transparent;
+  }
+  to{
+    border-right-color: #FFFFFF;
+  }
+`;
+
+const widthAlternate = keyframes`
+  from{
+    width: 0px;
+  }
+  to{
+    width: 74%;
+  }
+`;
 const moveLeft = keyframes`
   from {
     left: -100%;
@@ -87,7 +104,15 @@ const Title = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
-const SubText = styled.p``;
+const SubText = styled.p`
+  position: relative;
+  overflow: hidden;
+  width: 0;
+  white-space: nowrap;
+  animation: ${widthAlternate} 3.5s steps(40, end) 2 1s forwards,
+    ${lightBorder} 250ms alternate infinite;
+  border-right: 2px solid #FFFFFF;
+`;
 
 const HamburgerMenu = styled.button`
   display: flex;
