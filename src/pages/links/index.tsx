@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Header } from "../../components/Header";
 import GlobalStyle from "../../../styles/global";
-import { Container, Icons, ImgArea, Text, Wrapper } from "./styles";
+import { Container, Icons, ImgArea, Text, Wrapper } from "../../../styles/links/styles";
 
 export default function Links() {
     return (
