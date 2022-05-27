@@ -9,16 +9,13 @@ import { SocialMedia } from '../components/SocialMedia';
 import GlobalStyle from "../../styles/global";
 import { Project } from '../components/Project';
 import { projects } from '../../utils/data';
-import { useElementScroll, useTransform, useViewportScroll } from 'framer-motion';
+import { useTransform, useViewportScroll } from 'framer-motion';
 import {
-  HamburgerMenu,
-  Header,
   Main,
   HomeSection,
   Texts,
   Title,
   SubText,
-  Menu,
   AboutMe,
   SubTitle,
   AboutSection,
@@ -45,10 +42,9 @@ import {
   ImgArea,
   Container,
 } from '../../styles';
-import { useRef } from 'react';
+import { Header } from '../components/Header';
 
 const Home: NextPage = () => {
-  const aboutRef = useRef<HTMLElement | null>();
   const { scrollYProgress } = useViewportScroll();
   const positionAboutSection = useTransform(
     scrollYProgress,
@@ -59,37 +55,29 @@ const Home: NextPage = () => {
     <>
       <GlobalStyle />
       <Head>
-        <title>Lucas Gomes</title>
+        <title>Home</title>
         <meta name="description" content="Lucas Gomes Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header>
-        <Logo />
-        <Menu>
-          <Link href="#home" className="link">
-            Home
-          </Link>
-          <Link href="#aboutme" className="link">
-            About
-          </Link>
-          <Link href="#habilities" className="link">
-            Habilities
-          </Link>
-          <Link href="#projects" className="link">
-            Projects
-          </Link>
-          <Link href="/links" className="link">
-            Links
-          </Link>
-          <Link href="/setup" className="link">
-            Setup
-          </Link>
-        </Menu>
-        <HamburgerMenu>
-          <span />
-          <span />
-          <span />
-        </HamburgerMenu>
+        <Link href="#home" className="link">
+          Home
+        </Link>
+        <Link href="#aboutme" className="link">
+          About
+        </Link>
+        <Link href="#habilities" className="link">
+          Habilities
+        </Link>
+        <Link href="#projects" className="link">
+          Projects
+        </Link>
+        <Link href="/links" className="link">
+          Links
+        </Link>
+        <Link href="/setup" className="link">
+          Setup
+        </Link>
       </Header>
       <Main>
         <HomeSection id="home">

@@ -15,7 +15,7 @@ const widthAlternate = keyframes`
     width: 0px;
   }
   to{
-    width: 74%;
+    width: 82%;
   }
 `;
 const moveLeft = keyframes`
@@ -36,42 +36,6 @@ const moveRight = keyframes`
   }
 `;
 
-const Header = styled.header`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-
-  @media screen and (min-width: 48rem) {
-    padding: 2.625rem 1.5625rem;
-  }
-  @media screen and (max-width: 48rem) {
-    padding: 1rem 2rem;
-  }
-`;
-
-const Menu = styled.div`
-  display: flex;
-
-  a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 1.25rem;
-    border-radius: 10px;
-    transition: all 500ms;
-
-    :hover {
-      background: hsla(0, 0%, 100%, 0.1);
-    }
-  }
-
-  @media screen and (max-width: 48rem) {
-    display: none;
-  }
-`;
 const Main = styled.main`
   width: 100%;
 `;
@@ -114,28 +78,7 @@ const SubText = styled.p`
   white-space: nowrap;
   animation: ${widthAlternate} 3.5s steps(40, end) 2 1s forwards,
     ${lightBorder} 250ms alternate infinite;
-  border-right: 2px solid #ffffff;
-`;
-
-const HamburgerMenu = styled.button`
-  display: none;
-  flex-direction: column;
-  gap: 0.5rem;
-  height: 30px;
-  width: 2rem;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-
-  span {
-    width: 100%;
-    background: #ffffff;
-    height: 2px;
-  }
-
-  @media screen and (max-width: 48rem) {
-    display: flex;
-  }
+  border-right: 2px solid #FFFFFF;
 `;
 
 const AboutMe = styled.div`
@@ -198,7 +141,7 @@ const Text = styled.p`
 const TitleSection = styled.h4`
   font-size: 2.5rem;
   font-weight: 400;
-  color: #ffffff;
+  color: #FFFFFF;
   text-align: center;
   margin-bottom: 2.9375rem;
 `;
@@ -234,7 +177,7 @@ const Habilities = styled.section`
 
 const TitleHabilities = styled.h4`
   margin-top: 2.625rem;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 1.8rem;
   font-weight: 400;
 `;
@@ -259,6 +202,13 @@ const Section = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  transition: all 500ms;
+  padding: 1rem;
+  border-radius: 20px;
+
+  :hover {
+    background-color: #111430;
+  }
 `;
 const Circle = styled.section`
   display: flex;
@@ -310,28 +260,25 @@ const Element = styled.div`
 `;
 
 const TitleSmall = styled.h5`
-  color: #ffffff;
+  color: #FFFFFF;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1.875rem;
 `;
 
 const MailLink = styled.a`
-  color: #ffffff;
+  color: #FFFFFF;
   text-decoration: none;
   font-family: "Inter", sans-serif;
   font-weight: 100;
 `;
 
 const MenuItem = styled.a`
-  color: #ffffff;
+  color: #FFFFFF;
   text-decoration: underline;
 `;
 
 export {
-  Header,
-  HamburgerMenu,
-  Menu,
   Main,
   HomeSection,
   Texts,
