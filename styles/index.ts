@@ -44,12 +44,15 @@ const Header = styled.header`
   width: 100%;
 
   @media screen and (min-width: 48rem) {
-    padding: 2.625rem 7.5625rem;
+    padding: 2.625rem 1.5625rem;
+  }
+  @media screen and (max-width: 48rem) {
+    padding: 1rem 2rem;
   }
 `;
 
 const Menu = styled.div`
-  display: none;
+  display: flex;
 
   a {
     color: #ffffff;
@@ -65,8 +68,8 @@ const Menu = styled.div`
     }
   }
 
-  @media screen and (min-width: 48rem) {
-    display: flex;
+  @media screen and (max-width: 48rem) {
+    display: none;
   }
 `;
 const Main = styled.main`
@@ -111,11 +114,11 @@ const SubText = styled.p`
   white-space: nowrap;
   animation: ${widthAlternate} 3.5s steps(40, end) 2 1s forwards,
     ${lightBorder} 250ms alternate infinite;
-  border-right: 2px solid #FFFFFF;
+  border-right: 2px solid #ffffff;
 `;
 
 const HamburgerMenu = styled.button`
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 0.5rem;
   height: 30px;
@@ -130,8 +133,8 @@ const HamburgerMenu = styled.button`
     height: 2px;
   }
 
-  @media screen and (min-width: 48rem) {
-    display: none;
+  @media screen and (max-width: 48rem) {
+    display: flex;
   }
 `;
 
