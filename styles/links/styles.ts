@@ -1,19 +1,37 @@
 import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 
-const mouseClick = keyframes`
-  from{
-    transform: translateX(0) translateY(0);
+const mouseMove = keyframes`
+    10%{
+      transform: translateX(0) translateY(-40px) scale(0.8);
+    }
+    20%{
+      transform: translateX(100px) translateY(-30px);
+    }
+    30%{
+      transform: translateX(120px) translateY(20px);
+    }
+    40%{
+      transform: translateX(100px) translateY(40px);
     }
     50%{
-      transform: translateX(100px);
+      transform: translateX(-100px) translateY(80px);
     }
-  to{
-    transform:  translateY(100px);
-  /* top: 0; */
-  /* width: 22px;
-  height: 22px; */
-  }
+    60%{
+      transform: translateX(-100px) translateY(90px);
+    }
+    70%{
+      transform: translateX(80px) translateY(90px);
+    }
+    80%{
+      transform: translateX(50px) translateY(90px);
+    }
+    90%{
+      transform: translateX(-20px) translateY(90px);
+    }
+    100%{
+      transform: translateX(0);
+    }
 `;
 
 const Container = styled.main``;
@@ -42,13 +60,17 @@ const ImgArea = styled.div`
   padding: 0.25rem;
   position: relative;
 
-  img {
-  }
-
   #mouse {
     position: absolute;
-    animation: ${mouseClick} 1s alternate linear forwards infinite;
-    top: -20px;
+    animation: ${mouseMove} 10s infinite;
+    z-index: 5;
+  }
+
+  #afterClick {
+    position: absolute;
+    display: none;
+    top: 34px;
+    right: 80px;
   }
 `;
 
@@ -78,8 +100,8 @@ const LinkIcon = styled.a`
   text-decoration: none;
   transition: 200ms all;
 
-  :hover{
-    transform: scale(1.10);
+  :hover {
+    transform: scale(1.1);
     background-color: rgba(0, 0, 0, 0.4);
   }
 `;

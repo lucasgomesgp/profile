@@ -25,7 +25,7 @@ export default function Links() {
                 </Header>
                 <Wrapper>
                     <ImgArea>
-                        <Image src="/assets/avatar.png" width={100} height={100} layout="fixed" quality={100} alt="Lucas Gomes" />
+                        <Image src="/assets/avatar.png" width={100} height={100} layout="fixed" quality={100} priority alt="Lucas Gomes" />
                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" id="mouse">
                             <path d="M21.8369 1.16506L2.34719 10.1604C0.0985938 11.2099 0.848125 14.508 3.24672 14.508H11.4925V22.7538C11.4925 25.1524 14.7906 25.9024 15.8402 23.6533L24.8355 4.16365C25.585 2.36412 23.6359 0.415056 21.8369 1.16506V1.16506Z" fill="url(#paint0_linear_84_2440)" stroke="white" />
                             <defs>
@@ -37,6 +37,12 @@ export default function Links() {
                                     <stop offset="0.927083" stopColor="#B00FFF" />
                                 </linearGradient>
                             </defs>
+                        </svg>
+                        <svg width="10" height="10" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" id="afterClick">
+                            <g id="click">
+                                <rect id="second" x="1.05" y="1.05" width="2.9" height="2.9" rx="1.45" stroke="#8A20DD" strokeOpacity="1" strokeWidth="2" />
+                                <rect id="one" x="0.05" y="0.05" width="4.9" height="4.9" rx="2.45" stroke="#8A20DD" strokeOpacity="1" strokeWidth="2" />
+                            </g>
                         </svg>
                     </ImgArea>
                     <Text>
