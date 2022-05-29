@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Header } from "../../components/Header";
 import GlobalStyle from "../../../styles/global";
-import { Container, Icons, ImgArea, Text, Wrapper } from "../../../styles/links/styles";
+import { Container, Icons, ImgArea, LinkIcon, Small, Text, Wrapper } from "../../../styles/links/styles";
 
 export default function Links() {
     return (
@@ -43,6 +43,30 @@ export default function Links() {
                         Follow Me
                     </Text>
                     <Icons>
+                        <LinkIcon target="_blank" href="https://www.instagram.com/lucas_gomesgp/" id="link">
+                            <Image src={"/assets/icons/links/instagram.svg"} alt="Instagram" width={28} height={28} layout="fixed" />
+                            <Small>Instagram</Small>
+                        </LinkIcon>
+                        <LinkIcon target="_blank" href="https://twitter.com/lucas_gomesgp" id="link">
+                            <Image src={"/assets/icons/links/twitter.svg"} alt="Twitter" width={28} height={28} layout="fixed" />
+                            <Small>Twitter</Small>
+                        </LinkIcon>
+                        <LinkIcon target="_blank" href="https://github.com/lucasgomesgp" id="link">
+                            <Image src={"/assets/icons/links/github.svg"} alt="Github" width={28} height={28} layout="fixed" />
+                            <Small>Github</Small>
+                        </LinkIcon>
+                        <LinkIcon target="_blank" href="https://www.linkedin.com/in/lucas-gomes-aab356173/" id="link">
+                            <Image src={"/assets/icons/links/linkedin.svg"} alt="Linkedin" width={28} height={28} layout="fixed" />
+                            <Small>Linkedin</Small>
+                        </LinkIcon>
+                        <LinkIcon target="_blank" href="https://www.youtube.com/channel/UCbK1HocF7CCORYVVV0DnmPA" id="link">
+                            <Image src={"/assets/icons/links/youtube.svg"} alt="Youtube" width={28} height={28} layout="fixed" />
+                            <Small>Youtube</Small>
+                        </LinkIcon>
+                        <LinkIcon target="_blank" href="mailto:lucasgpdev@gmail.com" id="link">
+                            <Image src={"/assets/icons/links/email.svg"} alt="Email" width={28} height={28} layout="fixed" />
+                            <Small>Email</Small>
+                        </LinkIcon>
                     </Icons>
                 </Wrapper>
             </Container>

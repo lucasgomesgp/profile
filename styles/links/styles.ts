@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 
 const mouseClick = keyframes`
@@ -53,6 +54,40 @@ const ImgArea = styled.div`
 
 const Text = styled.h3``;
 
-const Icons = styled.div``;
+const Icons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  gap: 2rem;
+  flex-wrap: wrap;
+`;
 
-export { Container, Wrapper, ImgArea, Text, Icons };
+const LinkIcon = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 10rem;
+  padding: 0 1rem;
+  border: none;
+  gap: 0.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #111430;
+  text-decoration: none;
+  transition: 200ms all;
+
+  :hover{
+    transform: scale(1.10);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+`;
+
+const Small = styled.span`
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+`;
+export { Container, Wrapper, ImgArea, LinkIcon, Text, Icons, Small };

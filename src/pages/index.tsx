@@ -333,6 +333,11 @@ const Home: NextPage = () => {
                 Links
               </MenuItem>
             </Link>
+            <Link href="/setup">
+              <MenuItem>
+                Setup
+              </MenuItem>
+            </Link>
           </Element>
         </Footer>
         <SocialMedia />

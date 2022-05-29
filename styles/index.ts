@@ -276,6 +276,7 @@ const MailLink = styled.a`
 const MenuItem = styled.a`
   color: #FFFFFF;
   text-decoration: underline;
+  cursor: pointer;
 `;
 
 export {
