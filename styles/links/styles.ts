@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 
 const mouseMove = keyframes`
@@ -63,14 +62,8 @@ const ImgArea = styled.div`
   #mouse {
     position: absolute;
     animation: ${mouseMove} 10s infinite;
+    -webkit-animation: ${mouseMove} 10s infinite;
     z-index: 5;
-  }
-
-  #afterClick {
-    position: absolute;
-    display: none;
-    top: 34px;
-    right: 80px;
   }
 `;
 

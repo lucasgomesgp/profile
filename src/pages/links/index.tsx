@@ -38,12 +38,6 @@ export default function Links() {
                                 </linearGradient>
                             </defs>
                         </svg>
-                        <svg width="10" height="10" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg" id="afterClick">
-                            <g id="click">
-                                <rect id="second" x="1.05" y="1.05" width="2.9" height="2.9" rx="1.45" stroke="#8A20DD" strokeOpacity="1" strokeWidth="2" />
-                                <rect id="one" x="0.05" y="0.05" width="4.9" height="4.9" rx="2.45" stroke="#8A20DD" strokeOpacity="1" strokeWidth="2" />
-                            </g>
-                        </svg>
                     </ImgArea>
                     <Text>
                         Follow Me
