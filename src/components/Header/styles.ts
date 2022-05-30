@@ -67,9 +67,9 @@ const HamburgerMenu = styled.nav<HamburgerProps>`
   gap: 2rem;
   flex-direction: column;
   align-items: center;
-  top: 20%;
+  top: 12%;
   left: 0;
-  width: 100%;
+  min-width: 100%;
   padding: 0;
   z-index: 9999;
   background: #111430;
@@ -81,6 +81,7 @@ const HamburgerMenu = styled.nav<HamburgerProps>`
   a {
     text-decoration: none;
     color: #ffffff;
+    padding: 0.5rem 0;
     :hover {
       color: #ffffffaa;
     }
