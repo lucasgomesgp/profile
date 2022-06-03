@@ -78,7 +78,7 @@ const SubText = styled.p`
   white-space: nowrap;
   animation: ${widthAlternate} 3.5s steps(40, end) 2 1s forwards,
     ${lightBorder} 250ms alternate infinite;
-  border-right: 2px solid #FFFFFF;
+  border-right: 2px solid #ffffff;
 `;
 
 const AboutMe = styled.div`
@@ -141,7 +141,7 @@ const Text = styled.p`
 const TitleSection = styled.h4`
   font-size: 2.5rem;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   margin-bottom: 2.9375rem;
 `;
@@ -177,7 +177,7 @@ const Habilities = styled.section`
 
 const TitleHabilities = styled.h4`
   margin-top: 2.625rem;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.8rem;
   font-weight: 400;
 `;
@@ -185,16 +185,22 @@ const HabilitiesSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 11.875rem;
   margin-top: 4rem;
-
-  @media screen and (max-width: 1024px) {
+  overflow: hidden;
+  @media screen and (max-width: 64rem) {
     flex-wrap: wrap;
     gap: 4rem;
   }
   @media screen and (min-width: 48rem) {
     padding: 0 5.3125rem;
     margin-top: 10.25rem;
+  }
+
+  @media screen and (min-width: 64rem){
+    gap: 8rem;
+  }
+  @media screen and (min-width: 75rem) {
+    gap: 11.875rem;
   }
 `;
 const Section = styled.div`
@@ -260,21 +266,21 @@ const Element = styled.div`
 `;
 
 const TitleSmall = styled.h5`
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 1.875rem;
 `;
 
 const MailLink = styled.a`
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   font-family: "Inter", sans-serif;
   font-weight: 100;
 `;
 
 const MenuItem = styled.a`
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: underline;
   cursor: pointer;
 `;
