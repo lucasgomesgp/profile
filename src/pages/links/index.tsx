@@ -3,56 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { Header } from "../../components/Header";
 import GlobalStyle from "../../../styles/global";
+import { socialLinks } from "../../../utils/socialLinks";
 import { Container, Icons, ImgArea, LinkIcon, Small, Text, Wrapper } from "../../../styles/links/styles";
+import { useTranslation } from "react-i18next";
 
-const socialLinks = [
-    {
-        href: "https://www.instagram.com/lucas_gomesgp/",
-        src: "/assets/icons/links/instagram.svg",
-        name: "Instagram",
-    },
-    {
-        href: "https://twitter.com/lucas_gomesgp",
-        src: "/assets/icons/links/twitter.svg",
-        name: "Twitter",
-    },
-    {
-        href: "https://github.com/lucasgomesgp",
-        src: "/assets/icons/links/github.svg",
-        name: "Github",
-    },
-    {
-        href: "https://www.linkedin.com/in/lucas-gomes-aab356173/",
-        src: "/assets/icons/links/linkedin.svg",
-        name: "Linkedin",
-    },
-    {
-        href: "https://www.youtube.com/channel/UCbK1HocF7CCORYVVV0DnmPA",
-        src: "/assets/icons/links/youtube.svg",
-        name: "Youtube",
-    },
-    {
-        href: "mailto:lucasgpdev@gmail.com",
-        src: "/assets/icons/links/instagram.svg",
-        name: "Instagram",
-    },
-    {
-        href: "https://www.instagram.com/lucas_gomesgp/",
-        src: "/assets/icons/links/email.svg",
-        name: "Email",
-    },
-    {
-        href: "https://www.figma.com/@lucasgomesgp",
-        src: "/assets/icons/links/figma.svg",
-        name: "Figma",
-    },
-    {
-        href: "https://dev.to/lucas_gomesgp",
-        src: "/assets/icons/links/dev.svg",
-        name: "DEV.to",
-    }
-];
 export default function Links() {
+    const { t } = useTranslation();
     return (
         <>
             <GlobalStyle />
@@ -87,16 +43,14 @@ export default function Links() {
                         </svg>
                     </ImgArea>
                     <Text>
-                        Follow Me
+                        {t("followTitle")}
                     </Text>
                     <Icons>
                         {socialLinks.map(({ href, name, src }) => (
-                            <>
-                                <LinkIcon target="_blank" href={href}>
-                                    <Image src={src} alt={name} width={28} height={28} layout="fixed" />
-                                    <Small>{name}</Small>
-                                </LinkIcon>
-                            </>
+                            <LinkIcon target="_blank" href={href} key={name}>
+                                <Image src={src} alt={name} width={28} height={28} layout="fixed" />
+                                <Small>{name}</Small>
+                            </LinkIcon>
                         ))}
                     </Icons>
                 </Wrapper>

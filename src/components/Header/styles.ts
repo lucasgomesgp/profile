@@ -10,11 +10,15 @@ const Container = styled.header`
   flex-wrap: wrap;
   width: 100%;
 
+  @media screen and (max-width: 55.125rem) {
+    justify-content: center;
+  }
   @media screen and (min-width: 48rem) {
     padding: 2.625rem 1.5625rem;
   }
   @media screen and (max-width: 48rem) {
     padding: 1rem 2rem;
+    justify-content: space-between;
   }
 `;
 

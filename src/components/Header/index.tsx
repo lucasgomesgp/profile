@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, { ReactNode, useState } from "react";
+import { Countries } from "../Countries";
 import { Logo } from "../Logo";
 import { Container, HamburgerBtn, HamburgerMenu, Menu } from "./styles";
 
@@ -13,6 +14,7 @@ export function Header({ children }: Props) {
             <Logo />
             <Menu>
                 {children}
+                <Countries />
             </Menu>
             <HamburgerBtn onClick={() => { setHamburgerMenuStatus(!hamburgerMenuStatus) }}>
                 <span />
@@ -21,6 +23,7 @@ export function Header({ children }: Props) {
             </HamburgerBtn>
             <HamburgerMenu status={hamburgerMenuStatus}>
                 {children}
+                <Countries />
             </HamburgerMenu>
         </Container>
     );

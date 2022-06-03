@@ -1,0 +1,29 @@
+{
+    "translation":{
+        "homeMenu": "Home",
+        "aboutMenu": "About",
+        "habilitiesMenu": "Habilities",
+        "projectsMenu": "Projects",
+        "profession": "Front-end and Mobile Developer",
+        "aboutMeTitle": "ABOUT ME",
+        "projectsTitle": "PROJECTS",
+        "skillsTitle": "SKILLS",
+        "mobileTitle": "Mobile",
+        "trajectory": "Currently 22 years old, programming and learning the basis of quality software development, with a focus on the Web.",
+        "statusEducational": "Educational Status",
+        "computerTech": "Computer Technician",
+        "graduatedAt": "Bachelor in Information Systems",
+        "codeTitle": "Code",
+        "uiTextSkill": "Knowledge of advanced interface development, with best practices.",
+        "codeTextSkill": "Software development, following best practices and clean code.",
+        "mobileTextSkill": "Application development with the best market practices, using React Native.",
+        "contactTitle": "Contact",
+        "followTitle": "Follow Me",
+        "ecommerceProjectText": "Ecommerce for developers, with items used in the daily life of a programmer.",
+        "hboMaxProjectText": "The HBO Max project is a UI Clone, with a project fetched from Figma and developed to learn more about TailwindCSS.",
+        "walletProjectText": "Wallet is an expense control wallet, made especially for developers, with entries and exits to be carried out by each user.",
+        "gpt3ProjectText": "GPT-3 is a UI Clone, with a pre-defined project in Figma and developed according to the specifications defined in the project.",
+        "transportProjectText": "Transport is a transport, travel and removal company, serving the general public.",
+        "buscaDevProjectText": "Description of a developer's repositories and characteristics based on their Github."
+    }
+}

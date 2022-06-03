@@ -1,50 +1,50 @@
 export const projects = [
   {
     id: 1,
-    text: "Ecommerce for developers, with items used in the daily life of a programmer.",
     image: "/assets/projects/ecommerce.png",
     altImg: "Ecommerce",
     link_github: "https://github.com/lucasgomesgp/devcommerce",
     link_deploy: "https://devcommerce.vercel.app/",
+    nameTranslate: "ecommerceProjectText"
   },
   {
     id: 2,
-    text: "The HBO Max project is a UI Clone, with a project fetched from Figma and developed to learn more about TailwindCSS.",
     image: "/assets/projects/hbomax.png",
     altImg: "HBO Max",
     link_github: "https://github.com/lucasgomesgp/hbomax-ui",
     link_deploy: "http://uiclone-hbomax.vercel.app/",
+    nameTranslate: "hboMaxProjectText"
   },
   {
     id: 3,
-    text: "Wallet is an expense control wallet, made especially for developers, with entries and exits to be carried out by each user.",
     image: "/assets/projects/wallet.png",
     altImg: "Wallet",
     link_github: "https://github.com/lucasgomesgp/wallet",
     link_deploy: "https://wallet-gules.vercel.app/",
+    nameTranslate: "walletProjectText"
   },
   {
     id: 4,
-    text: "GPT-3 is a UI Clone, with a pre-defined project in Figma and developed according to the specifications defined in the project.",
     image: "/assets/projects/gpt3.png",
     altImg: "GPT-3",
     link_github: "https://github.com/lucasgomesgp/gpt3-website",
     link_deploy: "https://gpt3-website.vercel.app/",
+    nameTranslate: "gpt3ProjectText"
   },
   {
     id: 5,
-    text: "Transport is a transport, travel and removal company, serving the general public.",
     image: "/assets/projects/transport.png",
     altImg: "Transport",
     link_github: "https://github.com/lucasgomesgp/transport",
     link_deploy: "https://transport-pink.vercel.app/",
+    nameTranslate: "transportProjectText"
   },
   {
     id: 6,
-    text: "Description of a developer's repositories and characteristics based on their Github.",
     image: "/assets/projects/buscadev.png",
     altImg: "Search Devs",
     link_github: "https://github.com/lucasgomesgp/buscadevs",
     link_deploy: "https://devs-kohl.vercel.app/",
+    nameTranslate: "buscaDevProjectText"
   },
 ];
