@@ -85,7 +85,7 @@ const Home: NextPage = () => {
             <Link href="#aboutme" className="link">
               {t("aboutMenu")}
             </Link>
-            <Link href="#habilities" className="link">
+            <Link href="#skills" className="link">
               {t("habilitiesMenu")}
             </Link>
             <Link href="#projects" className="link">
