@@ -18,7 +18,7 @@ export default createGlobalStyle`
     body{
         background: #090a1a;
         width: 100%;
-        min-height: 100%;
+        min-height: 100vh;
     }
     p{
         color: #FFFFFF;

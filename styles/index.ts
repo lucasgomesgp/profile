@@ -196,7 +196,7 @@ const HabilitiesSection = styled.section`
     margin-top: 10.25rem;
   }
 
-  @media screen and (min-width: 64rem){
+  @media screen and (min-width: 64rem) {
     gap: 8rem;
   }
   @media screen and (min-width: 75rem) {
@@ -285,6 +285,43 @@ const MenuItem = styled.a`
   cursor: pointer;
 `;
 
+const Wrapper = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    animation: moveDot 2s infinite forwards alternate;
+  }
+  #dot1 {
+  }
+  
+  #dot2 {
+    animation-delay: 500ms;
+  }
+
+  #dot3 {
+    animation-delay: 1s;
+  }
+
+  @keyframes moveDot {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateY(-10px);
+      opacity: 0.5;
+    }
+  }
+`;
+
 export {
   Main,
   HomeSection,
@@ -316,4 +353,5 @@ export {
   TitleSmall,
   MailLink,
   MenuItem,
+  Wrapper,
 };
