@@ -1,0 +1,14 @@
+query Projects {
+  projects {
+    createdAt
+    deployUrl
+    description
+    githubUrl
+    id
+    publishedAt
+    updatedAt
+    photo {
+      url
+    }
+  }
+}

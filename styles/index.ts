@@ -68,7 +68,10 @@ const Title = styled.h1`
     #8a20dd 66.67%,
     #b00fff 92.71%
   );
+  background-clip: text;
+
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 `;
 const SubText = styled.p`
   position: relative;

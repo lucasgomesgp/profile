@@ -8,7 +8,6 @@ import { Logo } from "../components/Logo";
 import { SocialMedia } from "../components/SocialMedia";
 import GlobalStyle from "../../styles/global";
 import { Project } from "../components/Project";
-import { projects } from "../../utils/data";
 import { useTransform, useViewportScroll } from "framer-motion";
 import {
   Main,
@@ -46,9 +45,11 @@ import {
 import { Header } from "../components/Header";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
+import { useProjectsQuery } from "../graphql/generated";
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const { data, loading } = useProjectsQuery();
   const { scrollYProgress } = useViewportScroll();
   const positionAboutSection = useTransform(
     scrollYProgress,
@@ -56,12 +57,14 @@ const Home: NextPage = () => {
     ["-100%", "0%"]
   );
   const { t } = useTranslation();
-
   useEffect(() => {
-    setInterval(() =>{
+    setInterval(() => {
       setIsLoading(false);
-    },2000);
-  }, []);
+    }, 2000);
+    if(!loading){
+      console.log(data)
+    }
+  }, [data, loading]);
   return (
     <>
       <GlobalStyle />
@@ -72,9 +75,9 @@ const Home: NextPage = () => {
       </Head>
       {isLoading ? (
         <Wrapper>
-          <span className="dot" id="dot1"/>
-          <span className="dot" id="dot2"/>
-          <span className="dot" id="dot3"/>
+          <span className="dot" id="dot1" />
+          <span className="dot" id="dot2" />
+          <span className="dot" id="dot3" />
         </Wrapper>
       ) : (
         <>
@@ -534,25 +537,19 @@ const Home: NextPage = () => {
             <Projects id="projects">
               <SubTitle>{t("projectsTitle")}</SubTitle>
               <Container>
-                {projects.map(
-                  ({
-                    id,
-                    altImg,
-                    image,
-                    link_github,
-                    link_deploy,
-                    nameTranslate,
-                  }) => (
-                    <Project
-                      key={id}
-                      image={image}
-                      altImg={altImg}
-                      link_github={link_github}
-                      link_deploy={link_deploy}
-                      nameTranslate={nameTranslate}
-                    />
-                  )
-                )}
+                {!loading &&
+                  data?.projects.map(
+                    ({ id, deployUrl, githubUrl, photo, description }) => (
+                      <Project
+                        key={id}
+                        id={id}
+                        photo={photo}
+                        githubUrl={githubUrl}
+                        deployUrl={deployUrl}
+                        description={description}
+                      />
+                    )
+                  )}
               </Container>
             </Projects>
             <Footer>
