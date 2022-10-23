@@ -27,7 +27,6 @@ const Container = styled.section`
 
 const WrapperImg = styled.div`
   position: relative;
-
   transition: all 200ms;
   :hover {
     #btns {
@@ -41,9 +40,9 @@ const WrapperImg = styled.div`
 `;
 
 const Text = styled.p`
-  text-align: left;
-  margin-top: 1.125rem;
-  max-width: 400px;
+  text-align: justify;
+  padding-top: 1.125rem;
+  max-width: 450px;
 `;
 
 const Buttons = styled.div`

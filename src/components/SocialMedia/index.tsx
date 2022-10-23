@@ -30,6 +30,11 @@ export function SocialMedia() {
           <Image src={"/assets/icons/youtube.svg"} alt="Youtube" width={28} height={28} layout="fixed" />
         </a>
       </Link>
+      <Link href="https://dev.to/lucas_gomesgp">
+        <a target="_blank">
+          <Image src={"/assets/icons/dev.svg"} alt="Dev.to" width={28} height={28} layout="fixed" />
+        </a>
+      </Link>
     </Container>
   );
 };

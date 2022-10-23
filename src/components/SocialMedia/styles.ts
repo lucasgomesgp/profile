@@ -7,7 +7,7 @@ export const Container = styled.div`
   gap: 2.5rem;
   margin-top: 10.25rem;
   padding-bottom: 2rem;
-  
+  flex-wrap: wrap;
   img{
     transition: all 200ms;
     :hover{

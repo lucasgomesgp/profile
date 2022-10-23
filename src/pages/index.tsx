@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -9,6 +10,9 @@ import { SocialMedia } from "../components/SocialMedia";
 import GlobalStyle from "../../styles/global";
 import { Project } from "../components/Project";
 import { useTransform, useViewportScroll } from "framer-motion";
+import { Header } from "../components/Header";
+import { useTranslation } from "react-i18next";
+import { useProjectsQuery } from "../graphql/generated";
 import {
   Main,
   HomeSection,
@@ -42,10 +46,6 @@ import {
   Container,
   Wrapper,
 } from "../../styles";
-import { Header } from "../components/Header";
-import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
-import { useProjectsQuery } from "../graphql/generated";
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -61,10 +61,7 @@ const Home: NextPage = () => {
     setInterval(() => {
       setIsLoading(false);
     }, 2000);
-    if(!loading){
-      console.log(data)
-    }
-  }, [data, loading]);
+  }, []);
   return (
     <>
       <GlobalStyle />

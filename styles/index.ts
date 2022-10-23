@@ -104,12 +104,19 @@ const SubTitle = styled.h2`
 `;
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 130px;
+  display: grid;
   margin-top: 8rem;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  padding: 1rem;
+  gap: 4.125rem;
+
+  @media screen and (min-width: 48rem) and (max-width: 64rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (min-width: 64rem){
+    grid-template-columns: repeat(2, 30rem);
+  }
 `;
 const AboutSection = styled.section`
   display: flex;
@@ -304,7 +311,7 @@ const Wrapper = styled.div`
   }
   #dot1 {
   }
-  
+
   #dot2 {
     animation-delay: 500ms;
   }

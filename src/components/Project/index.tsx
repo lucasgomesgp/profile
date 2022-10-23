@@ -11,7 +11,6 @@ import {
 import { VscGithub, VscGlobe } from "react-icons/vsc";
 import { t } from "i18next";
 import { useTranslation } from "react-i18next";
-import { ProjectsQuery } from "../../graphql/generated";
 interface Redirect {
   type: "github" | "deploy";
 }
