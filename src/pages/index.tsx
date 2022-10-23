@@ -536,14 +536,15 @@ const Home: NextPage = () => {
               <Container>
                 {!loading &&
                   data?.projects.map(
-                    ({ id, deployUrl, githubUrl, photo, description }) => (
+                    ({ id, title, deployUrl, githubUrl, photo, tagsTechnologies }) => (
                       <Project
                         key={id}
                         id={id}
+                        title={title}
                         photo={photo}
                         githubUrl={githubUrl}
                         deployUrl={deployUrl}
-                        description={description}
+                        tagsTechnologies={tagsTechnologies}
                       />
                     )
                   )}

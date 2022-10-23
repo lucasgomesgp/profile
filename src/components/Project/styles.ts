@@ -25,12 +25,24 @@ const Container = styled.section`
   max-width: 500px;
 `;
 
+const ContainerTags = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  gap: 1rem;
+`;
+
 const WrapperImg = styled.div`
   position: relative;
   transition: all 200ms;
   :hover {
     #btns {
       display: flex;
+      justify-content: center;
+      width: 100%;
     }
     #project {
       opacity: 0.5;
@@ -51,7 +63,6 @@ const Buttons = styled.div`
   gap: 2rem;
   top: 40%;
   padding: 0 2rem;
-
 `;
 
 const Github = styled.button`
@@ -72,4 +83,13 @@ const Deploy = styled.button`
   ${button};
   background-color: #0c6291;
 `;
-export { Container, Text, WrapperImg, Buttons, Github, BtnText, Deploy };
+export {
+  Container,
+  ContainerTags,
+  Text,
+  WrapperImg,
+  Buttons,
+  Github,
+  BtnText,
+  Deploy,
+};

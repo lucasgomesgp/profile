@@ -109,7 +109,7 @@ const Container = styled.div`
   justify-content: center;
   grid-template-columns: 1fr;
   padding: 1rem;
-  gap: 4.125rem;
+  gap: 2.125rem;
 
   @media screen and (min-width: 48rem) and (max-width: 64rem) {
     grid-template-columns: repeat(2, 1fr);

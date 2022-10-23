@@ -3,6 +3,7 @@ import {
   BtnText,
   Buttons,
   Container,
+  ContainerTags,
   Deploy,
   Github,
   Text,
@@ -11,20 +12,30 @@ import {
 import { VscGithub, VscGlobe } from "react-icons/vsc";
 import { t } from "i18next";
 import { useTranslation } from "react-i18next";
+import { TagTech } from "../TagTech";
 interface Redirect {
   type: "github" | "deploy";
 }
 interface Props {
   id: string;
+  title: string;
+  tagsTechnologies: string;
   deployUrl: string;
   githubUrl: string;
   photo: {
-    url: string,
-  },
-  description: string;
+    url: string;
+  };
+  description?: string;
 }
 
-export function Project({ deployUrl, githubUrl, photo, description }: Props) {
+export function Project({
+  id,
+  title,
+  deployUrl,
+  githubUrl,
+  photo,
+  tagsTechnologies,
+}: Props) {
   const { t } = useTranslation();
   function handleRedirect({ type }: Redirect) {
     if (type === "github") {
@@ -38,7 +49,7 @@ export function Project({ deployUrl, githubUrl, photo, description }: Props) {
       <WrapperImg>
         <Image
           src={photo.url}
-          alt={"Projeto"}
+          alt={title}
           width={500}
           height={300}
           layout="responsive"
@@ -63,8 +74,11 @@ export function Project({ deployUrl, githubUrl, photo, description }: Props) {
           </Deploy>
         </Buttons>
       </WrapperImg>
-      <Text>{description}</Text>
-      {/* <Text>{t(nameTranslate)}</Text> */}
+      <ContainerTags>
+        {tagsTechnologies.split(",").map((tag) => (
+          <TagTech key={id} name={tag} />
+        ))}
+      </ContainerTags>
     </Container>
   );
 }

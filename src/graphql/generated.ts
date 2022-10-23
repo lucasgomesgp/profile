@@ -1280,6 +1280,10 @@ export type Projetc = Node & {
   scheduledIn: Array<ScheduledOperation>;
   /** System stage field */
   stage: Stage;
+  /** Techs of project */
+  tagsTechnologies: Scalars['String'];
+  /** Title of project */
+  title: Scalars['String'];
   /** The time the document was updated */
   updatedAt: Scalars['DateTime'];
   /** User that last updated this document */
@@ -1354,6 +1358,8 @@ export type ProjetcCreateInput = {
   description: Scalars['String'];
   githubUrl: Scalars['String'];
   photo: AssetCreateOneInlineInput;
+  tagsTechnologies: Scalars['String'];
+  title: Scalars['String'];
   updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
 
@@ -1505,6 +1511,44 @@ export type ProjetcManyWhereInput = {
   scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
   scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
   scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
+  tagsTechnologies?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  tagsTechnologies_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  tagsTechnologies_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  tagsTechnologies_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values that are not equal to given value. */
+  tagsTechnologies_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  tagsTechnologies_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  tagsTechnologies_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  tagsTechnologies_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values not starting with the given string. */
+  tagsTechnologies_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  tagsTechnologies_starts_with?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  title_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  title_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  title_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values that are not equal to given value. */
+  title_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  title_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  title_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  title_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values not starting with the given string. */
+  title_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  title_starts_with?: InputMaybe<Scalars['String']>;
   updatedAt?: InputMaybe<Scalars['DateTime']>;
   /** All values greater than the given value. */
   updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -1536,6 +1580,10 @@ export enum ProjetcOrderByInput {
   IdDesc = 'id_DESC',
   PublishedAtAsc = 'publishedAt_ASC',
   PublishedAtDesc = 'publishedAt_DESC',
+  TagsTechnologiesAsc = 'tagsTechnologies_ASC',
+  TagsTechnologiesDesc = 'tagsTechnologies_DESC',
+  TitleAsc = 'title_ASC',
+  TitleDesc = 'title_DESC',
   UpdatedAtAsc = 'updatedAt_ASC',
   UpdatedAtDesc = 'updatedAt_DESC'
 }
@@ -1545,6 +1593,8 @@ export type ProjetcUpdateInput = {
   description?: InputMaybe<Scalars['String']>;
   githubUrl?: InputMaybe<Scalars['String']>;
   photo?: InputMaybe<AssetUpdateOneInlineInput>;
+  tagsTechnologies?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
 };
 
 export type ProjetcUpdateManyInlineInput = {
@@ -1568,6 +1618,8 @@ export type ProjetcUpdateManyInput = {
   deployUrl?: InputMaybe<Scalars['String']>;
   description?: InputMaybe<Scalars['String']>;
   githubUrl?: InputMaybe<Scalars['String']>;
+  tagsTechnologies?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
 };
 
 export type ProjetcUpdateManyWithNestedWhereInput = {
@@ -1744,6 +1796,44 @@ export type ProjetcWhereInput = {
   scheduledIn_every?: InputMaybe<ScheduledOperationWhereInput>;
   scheduledIn_none?: InputMaybe<ScheduledOperationWhereInput>;
   scheduledIn_some?: InputMaybe<ScheduledOperationWhereInput>;
+  tagsTechnologies?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  tagsTechnologies_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  tagsTechnologies_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  tagsTechnologies_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values that are not equal to given value. */
+  tagsTechnologies_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  tagsTechnologies_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  tagsTechnologies_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  tagsTechnologies_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values not starting with the given string. */
+  tagsTechnologies_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  tagsTechnologies_starts_with?: InputMaybe<Scalars['String']>;
+  title?: InputMaybe<Scalars['String']>;
+  /** All values containing the given string. */
+  title_contains?: InputMaybe<Scalars['String']>;
+  /** All values ending with the given string. */
+  title_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are contained in given list. */
+  title_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values that are not equal to given value. */
+  title_not?: InputMaybe<Scalars['String']>;
+  /** All values not containing the given string. */
+  title_not_contains?: InputMaybe<Scalars['String']>;
+  /** All values not ending with the given string */
+  title_not_ends_with?: InputMaybe<Scalars['String']>;
+  /** All values that are not contained in given list. */
+  title_not_in?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  /** All values not starting with the given string. */
+  title_not_starts_with?: InputMaybe<Scalars['String']>;
+  /** All values starting with the given string. */
+  title_starts_with?: InputMaybe<Scalars['String']>;
   updatedAt?: InputMaybe<Scalars['DateTime']>;
   /** All values greater than the given value. */
   updatedAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -3536,12 +3626,14 @@ export enum _SystemDateTimeFieldVariation {
 export type ProjectsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type ProjectsQuery = { __typename?: 'Query', projects: Array<{ __typename?: 'Projetc', createdAt: any, deployUrl: string, description: string, githubUrl: string, id: string, publishedAt?: any | null, updatedAt: any, photo: { __typename?: 'Asset', url: string } }> };
+export type ProjectsQuery = { __typename?: 'Query', projects: Array<{ __typename?: 'Projetc', tagsTechnologies: string, title: string, createdAt: any, deployUrl: string, description: string, githubUrl: string, id: string, publishedAt?: any | null, updatedAt: any, photo: { __typename?: 'Asset', url: string } }> };
 
 
 export const ProjectsDocument = gql`
     query Projects {
   projects {
+    tagsTechnologies
+    title
     createdAt
     deployUrl
     description
