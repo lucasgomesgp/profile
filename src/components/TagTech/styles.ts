@@ -2,11 +2,9 @@ import styled from "styled-components";
 
 const Tag = styled.span`
   cursor: pointer;
-  border: 1px double transparent;
-  padding: 0.2rem;
-  width: 8rem;
+  border: 2px solid transparent;
   color: #ffffff;
-  background-origin: content-box;
+  background-origin: border-box;
   background-image: linear-gradient(#090a1a, #090a1a),
     linear-gradient(
       180deg,
@@ -22,6 +20,14 @@ const Tag = styled.span`
 
   :hover {
     opacity: 0.5;
+  }
+  &::before{
+    content: "";
+    padding: 0.2rem;
+  }
+  &::after{
+    content: "";
+    padding: 0.2rem;
   }
 `;
 

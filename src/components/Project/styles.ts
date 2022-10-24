@@ -32,7 +32,7 @@ const ContainerTags = styled.div`
   width: 100%;
   flex-wrap: wrap;
   padding-top: 1rem;
-  gap: 1rem;
+  gap: 0.5rem;
 `;
 
 const WrapperImg = styled.div`
