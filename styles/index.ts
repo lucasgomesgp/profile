@@ -225,26 +225,6 @@ const Section = styled.div`
     background-color: #111430;
   }
 `;
-const Circle = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 200px;
-  position: relative;
-
-  #bgCircle {
-    position: absolute;
-    top: 0;
-    transition: 1s all;
-    cursor: pointer;
-
-    :hover {
-      transform: rotate(360deg);
-      filter: opacity(10);
-    }
-  }
-`;
 const Paragraph = styled.p`
   font-weight: 300;
   font-size: 0.8rem;
@@ -354,7 +334,6 @@ export {
   TitleHabilities,
   HabilitiesSection,
   Section,
-  Circle,
   Paragraph,
   Projects,
   Footer,
