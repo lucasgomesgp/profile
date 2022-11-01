@@ -57,10 +57,17 @@ const Home: NextPage = () => {
     ["-100%", "0%"]
   );
   const { t } = useTranslation();
+
+  function removeHash(){
+    location.href = location.href.replace(window.location.hash,"");
+  }
   useEffect(() => {
     setInterval(() => {
       setIsLoading(false);
     }, 2000);
+    if (window.location.hash) {
+      removeHash();
+    }
   }, []);
   return (
     <>
