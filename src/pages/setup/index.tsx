@@ -4,10 +4,10 @@ import { Header } from "../../components/Header";
 import GlobalStyle from "../../../styles/global";
 import { useSetupQuery } from "../../graphql/generated";
 import { useTranslation } from "react-i18next";
-import { Container, Item, Main, Title } from "./styles";
+import { Container, Item, Main, Title } from "../../../styles/setup/styles";
 
 export default function Setup() {
-  const { data, loading } = useSetupQuery();
+  const { data } = useSetupQuery();
   const { t } = useTranslation();
   return (
     <>
