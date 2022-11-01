@@ -30,7 +30,7 @@ export default function Setup() {
         <Container>
           {data?.setups.map((item) => (
             <Item key={item.id}>
-              <Link href={item.link}>{item.title}</Link>
+              <Link href={item.link} target="_blank">{item.title}</Link>
             </Item>
           ))}
         </Container>
