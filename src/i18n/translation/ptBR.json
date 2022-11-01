@@ -24,6 +24,7 @@
         "walletProjectText": "Wallet é uma carteira de controle de gastos, feita especialmente para desenvolvedores, com entradas e saídas a serem realizadas por cada usuário.",
         "gpt3ProjectText": "O GPT-3 é um UI Clone, com um projeto pré-definido no Figma e desenvolvido de acordo com as especificações definidas no projeto.",
         "transportProjectText": "A Transport é uma empresa de transporte, viagens e mudanças, que atende o público em geral.",
-        "buscaDevProjectText": "Descrição dos repositórios e características de um desenvolvedor com base em seu Github."
+        "buscaDevProjectText": "Descrição dos repositórios e características de um desenvolvedor com base em seu Github.",
+        "setupTitle": "Itens do meu setup"
     }
 }

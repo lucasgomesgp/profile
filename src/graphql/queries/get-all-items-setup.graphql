@@ -1,0 +1,7 @@
+query Setup {
+  setups {
+    id
+    title
+    link
+  }
+}
