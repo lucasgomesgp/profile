@@ -311,6 +311,7 @@ const Wrapper = styled.div`
   }
 `;
 
+const BtnMenu = styled.button``;
 export {
   Main,
   HomeSection,
@@ -342,4 +343,5 @@ export {
   MailLink,
   MenuItem,
   Wrapper,
+  BtnMenu
 };

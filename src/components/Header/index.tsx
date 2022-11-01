@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React, { ReactNode, useState } from "react";
 import { Countries } from "../Countries";
 import { Logo } from "../Logo";
@@ -10,7 +9,7 @@ interface Props {
 export function Header({ children }: Props) {
     const [hamburgerMenuStatus, setHamburgerMenuStatus] = useState(false);
     return (
-        <Container>
+        <Container id="nav">
             <Logo />
             <Menu>
                 {children}

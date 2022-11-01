@@ -44,8 +44,10 @@ import {
   ImgArea,
   Container,
   Wrapper,
+  BtnMenu,
 } from "../../styles";
 import { CircleIconHabilities } from "../components/CircleIconHabilities";
+import { navigateTo } from "../../utils/navigateTo";
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -58,8 +60,8 @@ const Home: NextPage = () => {
   );
   const { t } = useTranslation();
 
-  function removeHash(){
-    location.href = location.href.replace(window.location.hash,"");
+  function removeHash() {
+    location.href = location.href.replace(window.location.hash, "");
   }
   useEffect(() => {
     setInterval(() => {
@@ -86,18 +88,38 @@ const Home: NextPage = () => {
       ) : (
         <>
           <Header>
-            <Link href="#home" className="link">
+            <BtnMenu
+              className="link"
+              onClick={() => {
+                navigateTo("home");
+              }}
+            >
               {t("homeMenu")}
-            </Link>
-            <Link href="#aboutme" className="link">
+            </BtnMenu>
+            <BtnMenu
+              className="link"
+              onClick={() => {
+                navigateTo("aboutMe");
+              }}
+            >
               {t("aboutMenu")}
-            </Link>
-            <Link href="#skills" className="link">
+            </BtnMenu>
+            <BtnMenu
+              className="link"
+              onClick={() => {
+                navigateTo("skills");
+              }}
+            >
               {t("habilitiesMenu")}
-            </Link>
-            <Link href="#projects" className="link">
+            </BtnMenu>
+            <BtnMenu
+              className="link"
+              onClick={() => {
+                navigateTo("projects");
+              }}
+            >
               {t("projectsMenu")}
-            </Link>
+            </BtnMenu>
             <Link href="/links" className="link">
               Links
             </Link>
@@ -124,7 +146,7 @@ const Home: NextPage = () => {
             </HomeSection>
             <AboutMe>
               <SubTitle>{t("aboutMeTitle")}</SubTitle>
-              <AboutSection id="aboutme">
+              <AboutSection id="aboutMe">
                 <ImgArea style={{ left: positionAboutSection }}>
                   <Image
                     src={aboutMeImg}

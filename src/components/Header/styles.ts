@@ -24,15 +24,20 @@ const Container = styled.header`
 
 const Menu = styled.div`
   display: flex;
+  align-items: center;
 
-  a {
+  a,
+  button {
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    padding: 1.25rem;
+    padding: 1rem;
     border-radius: 10px;
     transition: all 500ms;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 
     :hover {
       background: hsla(0, 0%, 100%, 0.1);
@@ -68,7 +73,7 @@ const HamburgerBtn = styled.button`
 const HamburgerMenu = styled.nav<HamburgerProps>`
   position: absolute;
   display: ${(props) => (props.status ? "flex" : "none")};
-  gap: 2rem;
+  gap: 1rem;
   flex-direction: column;
   align-items: center;
   top: 12%;
@@ -78,14 +83,20 @@ const HamburgerMenu = styled.nav<HamburgerProps>`
   z-index: 9999;
   background: #111430;
   transition: all 1s;
-
+  
   @media screen and (min-width: 48.2rem) {
     display: none;
   }
-  a {
+  a,
+  button {
     text-decoration: none;
     color: #ffffff;
     padding: 0.5rem 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+
     :hover {
       color: #ffffffaa;
     }
