@@ -50,7 +50,7 @@ export function CircleIconHabilities({ src, altImg }: Props) {
         height={100}
         layout="fixed"
         alt={altImg}
-        id="moveIcon"
+        className="moveIcon"
       />
     </Container>
   );

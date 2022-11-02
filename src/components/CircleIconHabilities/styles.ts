@@ -19,6 +19,20 @@ const Container = styled.section`
       filter: opacity(10);
     }
   }
+  .moveIcon{
+    animation: iconMove 5s linear infinite;
+  }
+  @keyframes iconMove {
+    0%{
+      transform: translateY(-5px);
+    }
+    50%{
+      transform: translateY(5px);
+    }
+    100%{
+      transform: translateY(-5px);
+    }
+  }
 `;
 
 export { Container };
