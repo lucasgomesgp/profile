@@ -67,7 +67,9 @@ const ImgArea = styled.div`
   }
 `;
 
-const Text = styled.h3``;
+const Text = styled.h3`
+  padding-bottom: 1rem;
+`;
 
 const Icons = styled.div`
   display: flex;
@@ -76,6 +78,7 @@ const Icons = styled.div`
   width: 30%;
   gap: 2rem;
   flex-wrap: wrap;
+  padding: 2rem 0;
 `;
 
 const LinkIcon = styled.a`
