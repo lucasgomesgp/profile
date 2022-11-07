@@ -15,6 +15,7 @@ import {
 } from "../../../styles/links/styles";
 import { useTranslation } from "react-i18next";
 import Script from "next/script";
+import { BackToTop } from "../../components/BackToTop";
 
 export default function Links() {
   const { t } = useTranslation();
@@ -102,6 +103,7 @@ export default function Links() {
           </Icons>
         </Wrapper>
       </Container>
+      <BackToTop />
     </>
   );
 }

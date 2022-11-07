@@ -5,6 +5,7 @@ import GlobalStyle from "../../../styles/global";
 import { useSetupQuery } from "../../graphql/generated";
 import { useTranslation } from "react-i18next";
 import { Container, Item, Main, Title } from "../../../styles/setup/styles";
+import { BackToTop } from "../../components/BackToTop";
 
 export default function Setup() {
   const { data } = useSetupQuery();
@@ -35,6 +36,7 @@ export default function Setup() {
           ))}
         </Container>
       </Main>
+      <BackToTop />
     </>
   );
 }

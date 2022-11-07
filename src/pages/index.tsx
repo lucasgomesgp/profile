@@ -48,6 +48,7 @@ import {
 } from "../../styles";
 import { CircleIconHabilities } from "../components/CircleIconHabilities";
 import { navigateTo } from "../../utils/navigateTo";
+import { BackToTop } from "../components/BackToTop";
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -271,6 +272,7 @@ const Home: NextPage = () => {
             </Footer>
             <SocialMedia />
           </Main>
+          <BackToTop />
         </>
       )}
     </>

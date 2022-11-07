@@ -11,3 +11,8 @@ export function navigateTo(area: string) {
     behavior: "smooth",
   });
 }
+
+export function navigateToTop(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
