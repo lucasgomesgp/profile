@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -45,10 +47,13 @@ import {
   Container,
   Wrapper,
   BtnMenu,
+  BtnDownloadCv,
+  TextCV,
 } from "../../styles";
 import { CircleIconHabilities } from "../components/CircleIconHabilities";
 import { navigateTo } from "../../utils/navigateTo";
 import { BackToTop } from "../components/BackToTop";
+import { FilePdf } from "@phosphor-icons/react";
 
 const Home: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -67,7 +72,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     setInterval(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 3000);
     if (window.location.hash) {
       removeHash();
     }
@@ -75,11 +80,6 @@ const Home: NextPage = () => {
   return (
     <>
       <GlobalStyle />
-      <Head>
-        <title>Home</title>
-        <meta name="description" content="Lucas Gomes Website" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       {isLoading ? (
         <Wrapper>
           <span className="dot" id="dot1" />
@@ -133,17 +133,25 @@ const Home: NextPage = () => {
               <Texts>
                 <Title>Lucas Gomes</Title>
                 <SubText>{t("profession")}</SubText>
+                <BtnDownloadCv href={"/files/cv.pdf"} download="curriculo" >
+                  <FilePdf
+                    size={28}
+                    color={"#FFFFFF"}
+                    id="pdfIcon"
+                  />
+                  <TextCV>Download CV</TextCV>
+                </BtnDownloadCv>
               </Texts>
               <Image
                 src={profileImg}
-                width={420}
+                width={500}
                 height={450}
                 quality={100}
                 priority
-                alt="Lucas Gomes Photo"
-                layout="fixed"
+                alt="Profile picture"
                 id="profilePhoto"
-              />
+                sizes="(max-width: 40em) 320px, (min-width: 60em) 500px"
+/>
             </HomeSection>
             <AboutMe>
               <SubTitle>{t("aboutMeTitle")}</SubTitle>
@@ -176,15 +184,14 @@ const Home: NextPage = () => {
                       <Link
                         href="https://unijuazeiro.edu.br/"
                         style={{ cursor: "pointer" }}
+                        target="_blank"
                       >
-                        <a target="_blank">
-                          <Image
-                            src="/assets/logo_unijuazeiro.png"
-                            width={152}
-                            height={69}
-                            alt="Unijuazeiro Logo"
-                          />
-                        </a>
+                        <Image
+                          src="/assets/logo_unijuazeiro.png"
+                          width={152}
+                          height={69}
+                          alt="Unijuazeiro Logo"
+                        />
                       </Link>
                       <TypeStudy>{t("graduatedAt")}</TypeStudy>
                       <Time>2019-2022</Time>
@@ -262,11 +269,11 @@ const Home: NextPage = () => {
                 <MenuItem href="#aboutme">About</MenuItem>
                 <MenuItem href="#skills">Skills</MenuItem>
                 <MenuItem href="#projects">Projects</MenuItem>
-                <Link href="/links">
-                  <MenuItem>Links</MenuItem>
+                <Link href="/links" className="link">
+                  Links
                 </Link>
-                <Link href="/setup">
-                  <MenuItem>Setup</MenuItem>
+                <Link href="/setup" className="link">
+                  Setup
                 </Link>
               </Element>
             </Footer>

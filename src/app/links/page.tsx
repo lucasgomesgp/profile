@@ -43,7 +43,6 @@ export default function Links() {
               src="/assets/avatar.png"
               width={100}
               height={100}
-              layout="fixed"
               quality={100}
               priority
               alt="Lucas Gomes"
@@ -95,7 +94,6 @@ export default function Links() {
                   alt={name}
                   width={28}
                   height={28}
-                  layout="fixed"
                 />
                 <Small>{name}</Small>
               </LinkIcon>
