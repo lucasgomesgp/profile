@@ -1,3 +1,4 @@
+"use client"
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,14 +15,12 @@ import {
   Wrapper,
 } from "../../../styles/links/styles";
 import { useTranslation } from "react-i18next";
-import Script from "next/script";
 import { BackToTop } from "../../components/BackToTop";
 
 export default function Links() {
   const { t } = useTranslation();
   return (
     <>
-      <Script src="https://apis.google.com/js/platform.js" />
       <GlobalStyle />
       <Head>
         <title>Links</title>
@@ -79,13 +78,6 @@ export default function Links() {
             </svg>
           </ImgArea>
           <Text>{t("followTitle")}</Text>
-          <div
-            className="g-ytsubscribe"
-            data-channelid="UCbK1HocF7CCORYVVV0DnmPA"
-            data-layout="full"
-            data-theme="dark"
-            data-count="hidden"
-          />
           <Icons>
             {socialLinks.map(({ href, name, src }) => (
               <LinkIcon target="_blank" href={href} key={name}>

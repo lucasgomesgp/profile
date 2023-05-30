@@ -1,4 +1,4 @@
-import Head from "next/head";
+"use client"
 import Link from "next/link";
 import { Header } from "../../components/Header";
 import GlobalStyle from "../../../styles/global";
@@ -6,6 +6,7 @@ import { useSetupQuery } from "../../graphql/generated";
 import { useTranslation } from "react-i18next";
 import { Container, Item, Main, Title } from "../../../styles/setup/styles";
 import { BackToTop } from "../../components/BackToTop";
+import Head from "next/head";
 
 export default function Setup() {
   const { data } = useSetupQuery();
@@ -15,7 +16,7 @@ export default function Setup() {
       <GlobalStyle />
       <Head>
         <title>Setup</title>
-        <meta name="description" content="Setup" />
+        <meta name="description" content="Links" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header>
