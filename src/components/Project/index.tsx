@@ -6,12 +6,9 @@ import {
   ContainerTags,
   Deploy,
   Github,
-  Text,
   WrapperImg,
 } from "./styles";
 import { VscGithub, VscGlobe } from "react-icons/vsc";
-import { t } from "i18next";
-import { useTranslation } from "react-i18next";
 import { TagTech } from "../TagTech";
 interface Redirect {
   type: "github" | "deploy";
@@ -36,7 +33,6 @@ export function Project({
   photo,
   tagsTechnologies,
 }: Props) {
-  const { t } = useTranslation();
   function handleRedirect({ type }: Redirect) {
     if (type === "github") {
       window.open(githubUrl, "_blank");
@@ -50,9 +46,8 @@ export function Project({
         <Image
           src={photo.url}
           alt={title}
-          width={500}
+          width={400}
           height={300}
-          layout="responsive"
           id="project"
         />
         <Buttons id="btns">
@@ -76,7 +71,7 @@ export function Project({
       </WrapperImg>
       <ContainerTags>
         {tagsTechnologies.split(",").map((tag) => (
-          <TagTech key={id} name={tag} />
+          <TagTech key={id+","+Math.random()} name={tag} />
         ))}
       </ContainerTags>
     </Container>

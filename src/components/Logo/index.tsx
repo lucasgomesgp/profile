@@ -1,9 +1,7 @@
 import { LogoArea } from "./styles";
 import { motion } from "framer-motion";
-import { useRouter } from "next/router";
 
 export function Logo() {
-  const router = useRouter();
   const variantsName = {
     hidden: { opacity: 0 },
     show: { opacity: 1 },
@@ -11,9 +9,7 @@ export function Logo() {
 
   return (
     <LogoArea
-      onClick={() => {
-        router.push("/");
-      }}
+    href="/"
     >
       <motion.svg
         width="169"

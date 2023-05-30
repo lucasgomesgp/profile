@@ -23,6 +23,8 @@ const button = `
 `;
 const Container = styled.section`
   max-width: 500px;
+  overflow: hidden;
+
 `;
 
 const ContainerTags = styled.div`
@@ -38,6 +40,9 @@ const ContainerTags = styled.div`
 const WrapperImg = styled.div`
   position: relative;
   transition: all 200ms;
+  img{
+    width: 100%;
+  }
   :hover {
     #btns {
       display: flex;

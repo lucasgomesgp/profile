@@ -76,7 +76,7 @@ const HamburgerMenu = styled.nav<HamburgerProps>`
   gap: 1rem;
   flex-direction: column;
   align-items: center;
-  top: 12%;
+  top: 14%;
   left: 0;
   min-width: 100%;
   padding: 0;

@@ -13,7 +13,7 @@ export function Countries() {
                         <Button key={key} onClick={() => {
                             i18n.changeLanguage(key)
                         }} nameLang={key} activeLang={i18n.language}>
-                            <Image src={imageSrc} alt={name} layout="fixed" width={25} height={25} />
+                            <Image src={imageSrc} alt={name} width={25} height={25} />
                         </Button>
                     ))
                 }

@@ -23,6 +23,7 @@ export default createGlobalStyle`
         background: #090a1a;
         width: 100%;
         min-height: 100vh;
+        overflow-x: hidden;
     }
     p{
         color: #FFFFFF;

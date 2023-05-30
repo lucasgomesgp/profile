@@ -10,12 +10,20 @@ const lightBorder = keyframes`
   }
 `;
 
-const widthAlternate = keyframes`
+const widthAlternateBig = keyframes`
   from{
     width: 0px;
   }
   to{
-    width: 82%;
+      width: 56%;
+  }
+`;
+const widthAlternateSmall = keyframes`
+  from{
+    width: 0px;
+  }
+  to{
+      width: 78%;
   }
 `;
 const moveLeft = keyframes`
@@ -47,7 +55,7 @@ const HomeSection = styled.section`
   gap: 8.25rem;
   margin-top: 4rem;
   flex-wrap: wrap;
-
+  overflow-x: hidden;
   #profilePhoto {
     position: relative;
     animation: ${moveRight} 1s ease-in 1;
@@ -57,6 +65,9 @@ const HomeSection = styled.section`
 const Texts = styled.div`
   position: relative;
   animation: ${moveLeft} 1s ease-in 1;
+  @media screen and (max-width: 320px) {
+    padding: 0 2rem;
+  }
 `;
 const Title = styled.h1`
   font-size: 3.25rem;
@@ -78,9 +89,16 @@ const SubText = styled.p`
   overflow: hidden;
   width: 0;
   white-space: nowrap;
-  animation: ${widthAlternate} 3.5s steps(40, end) 2 1s forwards,
-    ${lightBorder} 250ms alternate infinite;
   border-right: 2px solid #ffffff;
+  margin-bottom: 2rem;
+  @media screen and (min-width: 320px) {
+    animation: ${widthAlternateBig} 3.5s steps(40, end) 2 1s forwards,
+      ${lightBorder} 250ms alternate infinite;
+  }
+  @media screen and (max-width: 320px) {
+    animation: ${widthAlternateSmall} 3.5s steps(40, end) 2 1s forwards,
+      ${lightBorder} 250ms alternate infinite;
+  }
 `;
 
 const AboutMe = styled.div`
@@ -110,16 +128,17 @@ const Container = styled.div`
   grid-template-columns: 1fr;
   padding: 1rem;
   gap: 2.125rem;
-
+  place-items: center;
   @media screen and (min-width: 48rem) and (max-width: 64rem) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media screen and (min-width: 64rem){
+  @media screen and (min-width: 64rem) {
     grid-template-columns: repeat(2, 30rem);
   }
 `;
 const AboutSection = styled.section`
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: 5.9375rem;
   gap: 8.0625rem;
@@ -130,6 +149,7 @@ const TextSection = styled(motion.article)`
   justify-content: center;
   position: relative;
   transition: all 1s;
+  word-wrap: break-word;
 `;
 
 const ImgArea = styled(motion.div)`
@@ -146,6 +166,11 @@ const Text = styled.p`
   @media screen and (min-width: 48rem) {
     width: 30rem;
   }
+`;
+
+const TextCV = styled.p`
+  color: #ffffff;
+  font-weight: bold;
 `;
 const TitleSection = styled.h4`
   font-size: 2.5rem;
@@ -252,6 +277,12 @@ const Element = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 14px;
+
+  .link {
+    color: #ffffff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `;
 
 const TitleSmall = styled.h5`
@@ -311,11 +342,28 @@ const Wrapper = styled.div`
   }
 `;
 
+const BtnDownloadCv = styled.a`
+  text-decoration: none;
+  padding: 1rem;
+  border: 2px solid #5c59df;
+  border-radius: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 12rem;
+  gap: 0.5rem;
+  transition: all 0.5;
+  &:hover {
+    background-color: #5c59df;
+  }
+`;
+
 const BtnMenu = styled.button``;
 export {
   Main,
   HomeSection,
   Texts,
+  TextCV,
   Title,
   SubText,
   AboutMe,
@@ -343,5 +391,6 @@ export {
   MailLink,
   MenuItem,
   Wrapper,
-  BtnMenu
+  BtnMenu,
+  BtnDownloadCv,
 };
